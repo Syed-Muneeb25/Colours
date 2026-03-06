@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Muhammad Muneeb | 76239</title>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <section id = "bigSection">
+
+        <h2> Background Colour: <span id="boxDisplay"></span></h2>
+
+        <button id="btn-colour">Click me</button>
+
+    </section>
+
+
+    <script>
+        const btnColour = document.getElementById('btn-colour');
+        const bigSection = document.getElementById('bigSection');
+        const boxDisplay = document.getElementById('boxDisplay');
+
+
+        btnColour.addEventListener('click', () => {
+            let strhexColour = '#';
+            const arrhex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+            for (let i = 0; i < 6; i++) {
+                strhexColour += arrhex[getRandomNumber(arrhex.length)];
+            }
+            bigSection.style.backgroundColor = strhexColour;
+            boxDisplay.textContent = strhexColour;
+        });
+
+        // Generate random number in range from 0 to max-1
+    function getRandomNumber(max) {
+    return Math.floor(Math.random() * max);
+    }
+    </script>
+    
+</body>
+</html>
